@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="increaseBtn.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>increase btn </title>
+</head>
+<body>
+    <div id="count">
+        <button id="decreaseBtn">-</button>
+        <label id="counter">1</label>
+        <button id="increaseBtn">+</button>
+    </div>
+
+    <script>
+const add = document.getElementById("increaseBtn") ;
+const minus = document.getElementById("decreaseBtn") ;
+const num = document.getElementById("counter") ;
+        
+        let a = 1;
+
+        add.addEventListener("click", ()=> {
+            if(a < 10){
+                a++;
+                a = (a > 10) ?  + a : a ;
+            num.innerHTML = a ;
+            }
+        });
+
+        minus.addEventListener("click", ()=> {
+            if(a > 1){
+                a-- ;
+                a = (a > 10) ?  + a : a ;
+            num.innerHTML = a ;
+            }
+        });
+
+    </script>
+</body>
+</html>
